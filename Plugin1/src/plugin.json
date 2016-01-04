@@ -1,0 +1,6 @@
+{
+  "main": "com.heartPattern.plugin1.Plugin1",
+  "version": "1.0.0",
+  "name": "Plugin1",
+  "author":["smartsteve","HeartPattern"]
+}
