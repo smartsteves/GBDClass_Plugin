@@ -1,7 +1,6 @@
 package com.smartsteve.pluginLoader;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.util.Scanner;
 
 /**
@@ -26,7 +25,7 @@ public class PluginLoader {
             }
         }
         plugins.runInit();
-        listen();
+        listen(); // 플러그인이 잘 작동하는지 확인하기위한 명령어 처리
     }
     public void listen(){
         class ConsolListner extends Thread{
@@ -35,7 +34,7 @@ public class PluginLoader {
                 Scanner sc = new Scanner(System.in);
                 String line = sc.nextLine();
                 String[] arguments = line.split(" ");
-                switch(arguments[0])
+                switch (arguments[0]) //귀찮아서 사용자가 명령어를 잘못치는 것을 대비하는 코드는 없습니다. 예를 들자면 사용자가 getVersion까지만 친다던가 하면 오류가 뜰껍니다. 여러분이 알아서 처리하시리라 믿습니다.
                 {
                     case "getVersion":
                         System.out.println(plugins.getPlugin(arguments[1]).getVersion());
