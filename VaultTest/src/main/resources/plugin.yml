@@ -1,0 +1,4 @@
+name: VaultTest
+main: io.github.smartsteves.vaultTest
+version: 1.0
+depend: [Vault]
